@@ -3,10 +3,10 @@ const path = require("path");
 const config = {
   entry: {
     vendor: ["@babel/polyfill", "react"],
-    index: ["./src/components/entrypoints/index.jsx"]
+    index: ["./src/pages/index.jsx"]
   },
   output: {
-    path: path.resolve(__dirname, "src", "public"),
+    path: path.resolve(__dirname, "public"),
     filename: "[name].js"
   },
   module: {
@@ -17,11 +17,16 @@ const config = {
           loader: "babel-loader",
         },
         exclude: [/node_modules/, /public/]
-      }
+      },
+      {
+        test: /\.(ts|tsx)?$/,
+        use: 'ts-loader',
+        exclude: [/node_modules/],
+      },
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".wasm", ".mjs", "*"]
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".wasm", ".mjs", "*"]
   }
 };
 
