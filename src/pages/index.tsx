@@ -1,8 +1,11 @@
 import React from "react"
-import { hydrate } from "react-dom";
+import { Header } from "../components/header";
 
-const IndexPage = () => <div>Index</div>;
-
-hydrate(<IndexPage/>, document.getElementById("root"));
+const IndexPage = () => (
+    <main>
+        <Header/>
+        Index page
+    </main>
+);
 
 export default IndexPage;
