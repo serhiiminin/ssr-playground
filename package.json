@@ -10,7 +10,7 @@
     "webpack": "webpack -wd",
     "dev": "nodemon --exec babel-node src/index.js"
   },
-  "author": "",
+  "author": "Serhii Minin",
   "license": "ISC",
   "dependencies": {
     "compression": "1.7.4",
@@ -32,6 +32,7 @@
     "@babel/polyfill": "7.8.7",
     "@babel/preset-env": "7.9.0",
     "@babel/preset-react": "7.9.4",
+    "@babel/preset-typescript": "7.9.0",
     "@types/node": "13.9.1",
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.5",
@@ -39,7 +40,6 @@
     "babel-loader": "8.1.0",
     "nodemon": "2.0.2",
     "rimraf": "3.0.2",
-    "ts-loader": "6.2.2",
     "ts-node": "8.6.2",
     "typescript": "3.8.3"
   }

@@ -1,6 +1,7 @@
 const path = require("path");
 
 const config = {
+  mode: "development",
   entry: {
     vendor: ["@babel/polyfill", "react"],
     index: ["./src/pages/index.jsx"]
@@ -12,15 +13,8 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        use: {
-          loader: "babel-loader",
-        },
-        exclude: [/node_modules/, /public/]
-      },
-      {
         test: /\.(ts|tsx)?$/,
-        use: 'ts-loader',
+        use: 'babel-loader',
         exclude: [/node_modules/],
       },
     ]
