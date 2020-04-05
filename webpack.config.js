@@ -4,7 +4,8 @@ const config = {
   mode: "development",
   entry: {
     vendor: ["@babel/polyfill", "react"],
-    index: ["./src/pages/index.jsx"]
+    index: ["./src/pages/index.tsx"],
+    server: ["./src/index.ts"]
   },
   output: {
     path: path.resolve(__dirname, "public"),
